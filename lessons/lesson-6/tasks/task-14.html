@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Задача 2 інші</h1>
+
+    <p>
+        Знайти суму цифр числа, що знаходяться між першою цифрою 7 і останньою цифрою 7 
+        (у числі є всього дві цифри 7, наприклад: 2679328712)
+
+    </p>
+
+    <script>
+        let number = String(2679328712)
+        let num1 = 7
+        let sum1 = 0
+        let test = false
+        
+        for (let index = 0; index < number.length; index++) {
+            let int = parseInt(number[index])
+            if(int == num1){
+                test = !test
+            } 
+            if(test && (int !== num1)){
+                sum1+= int
+            }
+        }
+        document.write(`${sum1}`)
+
+        // let number = String(2679328712)
+        // let firstIndex = number.indexOf('7')
+        // let lastIndex = number.lastIndexOf('7')
+        // let sum = 0
+        // console.log(firstIndex, lastIndex)
+        // for (let index = firstIndex + 1; index < lastIndex; index++) {
+        //     sum+= parseInt(number[index])
+            
+        // }
+        // document.write(`${sum}`)
+    </script>
+</body>
+</html>

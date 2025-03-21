@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Задача 5 інші</h1>
+
+    <p>
+        Зобразити рівнобедрений трикутник із символів ^. Висоту задає користувач. Наприклад, на екрані висота =5. 
+    </p>
+
+    <script>
+        let rowNum  = parseInt(prompt(`введіть кількість рядків`))   
+        let gapsNum = rowNum*2
+        for (let row  = 1; row <= rowNum*2; row+=2) {
+            document.write(`<br>`)
+            
+            for (let gap = 1; gap <= gapsNum; gap++) {
+                document.write(`&nbsp`)
+            }
+            gapsNum-=2
+            for (let symbol = 0; symbol < row; symbol++) {
+                    document.write(`\^`)
+            }
+        } console.log(rowNum)
+    </script>
+</body>
+</html>

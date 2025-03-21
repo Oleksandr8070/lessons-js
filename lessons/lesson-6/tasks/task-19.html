@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Задача 7 інші </h1>
+
+    <p>
+        Написати програму, яка показуватиме на екрані піднесене до квадрату число, 
+        що вводиться користувачем. Користувач вирішує самостійно – виходити з 
+        програми або продовжувати ввід. (Підказка: потрібно запустити нескінчений цикл, 
+        в тілі якого передбачити його переривання у випадку настання певної умови).
+
+    </p>
+
+    <script>
+        let question
+        do{
+            let num = parseFloat(prompt(`введіть яке має бути піднесене до квадрату`))
+            let result = num*num
+            question = confirm(`число ${num} піднесене до квадрату це ${result}. Працювати далі?`)
+            console.log(question)
+        }while(question === true)
+
+    </script>
+</body>
+</html>

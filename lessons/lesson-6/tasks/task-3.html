@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Задача 3</h1>
+
+    <p>
+        Відобразити трикутник за допомогою символів «о»
+        оооооооооооо
+        ооооооооооо
+        оооооооооо
+        ооооооооо
+        оооооооо
+        …
+        оо
+        о
+    </p>
+
+    <h1>Задача 3.1</h1>
+    <p>
+        Відобразити трикутник за допомогою символів «о»
+    </p>
+    <script>
+        let letterNum = 12
+        let gap = " "
+        for (let row = 0; row < 12; row++) {
+            document.write(`<br>`)
+            for (let column = 0; column < letterNum; column++) {
+                let letter = String.fromCharCode(111)
+                document.write(`${letter}`)
+            }
+            letterNum--
+        }
+
+        let letterNum2 = 12
+        let gapsNum = 0
+        for (let column = 0; column < 12; column++) {
+            document.write(`<br>`)
+
+            for (let gap = 0; gap < gapsNum; gap++) {
+                document.write(`&nbsp`)
+            }
+            gapsNum++
+            for (let column = 0; column < letterNum2; column++) {
+                let letter = String.fromCharCode(111)
+                document.write(`${letter}`)
+            }
+            letterNum2--
+
+        }
+    </script>
+</body>
+</html>

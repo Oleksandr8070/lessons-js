@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Задача 12</h1>
+
+    <p>
+        Написати програму виведення на екран кожного символу латинського алфавіту та
+        поруч з кожним з них символу, що передує йому та що слідує за ним.
+    </p>
+
+    <script>
+        for (let numCod = 65; numCod <= 90; numCod++) {
+            let letter = String.fromCharCode(numCod)
+            document.write(`${letter}`)
+            for (let i = 0; i < 1; i++) {
+                if( numCod !== 65){
+                    let b = numCod -1
+                    let firstLetter = String.fromCharCode(b)
+                    document.write(`${firstLetter}`)
+                }
+            }
+            for (let c = 0; c < 1; c++) {
+                if( numCod !== 90){
+                    let b = numCod +1
+                    let secondLetter = String.fromCharCode(b)
+                    document.write(`${secondLetter}<br>`)
+                }
+                
+            }
+            
+        }
+    </script>
+</body>
+</html>

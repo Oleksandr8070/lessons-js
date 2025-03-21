@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Задача 13 інші</h1>
+
+    <p>
+        У закладі освіти повідомляється про початок навчального дня, 
+        тривалість уроку, кількість уроків. Отримати розклад дзвінків на весь навчальний день. 
+    </p>
+
+    <script>
+        let startDayHours = 8
+        let startDayMinute = 30
+        let durationLesson = 45
+        let pauseLesson = 15
+        let lessonsNumber = 6
+        let lesson = 1
+        let startMinute = (startDayHours * 60) + startDayMinute
+        let finishMinute = startDayMinute + (startDayHours * 60) + (pauseLesson * (lessonsNumber - 1)) + (lessonsNumber*durationLesson)
+    
+        for (let index = startMinute; index <= finishMinute; index+=(pauseLesson + durationLesson)) {
+            let startHours = Math.floor(index/60)
+            let startMinute = (index%60)
+            let allMinuteFinish = index + durationLesson
+            let finishHours = Math.floor(allMinuteFinish/60)
+            let finishMinute = (allMinuteFinish%60)
+            document.write(`<br>урок №${lesson}  Початок ${startHours}:${startMinute} Кінець ${finishHours}:${finishMinute}`)
+            lesson++ 
+        }
+    </script>
+</body>
+</html>

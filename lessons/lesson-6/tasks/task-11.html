@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Задача 11</h1>
+
+    <p>
+        Вивести на екран усі двоцифрові числа, у яких перша цифра є більшою або рівною за
+        другу.
+    </p>
+    <h1>Задача 11.11</h1>
+
+    <p>
+        Вивести на екран усі трицифрові числа, у яких перша цифра є більшою або рівною за
+        суму другої і третьої.
+    </p>
+
+    <script>
+        // for (let tens = 1; tens <= 9; tens++){
+        //     for (let units = 0; units <= 9; units++) {
+        //         if(tens >= units){
+        //             document.write(`<br>${tens}${units}`)
+        //         }
+                
+        //     }
+        // }
+        // for (let i = 10; i <= 99; i++){
+        //     let tens = Math.floor(i/10)%10
+        //     console.log(`${tens}`)
+        //     let units = i%10
+        //     if(tens>=units){
+        //         document.write(`<br>${i}`)
+        //     }
+        // }
+        document.write(`Задача 11.11`)
+        for (let i = 100; i <= 999; i++) {
+        let units = i%10
+        let tens = Math.floor(i/10)%10
+        let hundreds = Math.floor(i/100)
+        if(hundreds >= (tens+units)){
+            document.write(`<br>${i}`)
+        }
+    }
+    </script>
+</body>
+</html>

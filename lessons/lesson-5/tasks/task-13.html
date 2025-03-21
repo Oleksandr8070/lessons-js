@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Задача 13</h1>
+
+    <p>
+        Морський бій. 
+        Комп’ютер випадково розташовує одиночний корабель на полі розміром N*M. Маючи К снарядів користувач намагається потопити корабель.
+    </p>
+
+    <script>
+        if (confirm(`Почати тестування`)){
+            let columnNumbers = parseInt(prompt('Введіть кільксть колонок'))
+            let rowNumbers = parseInt(prompt('Введіть кількість рядків'))
+            let shotNumbers = parseInt(prompt('Введіть кількість пострілів'))
+            let shipColumn = 1 + Math.floor(Math.random() * columnNumbers)
+            let shipRow = 1 + Math.floor(Math.random() * rowNumbers)
+            for (let index = 0; index < shotNumbers; index++) {
+                let shotColumn = parseInt(prompt(`Введіть колонку для пострілу від 1 до ${columnNumbers}`))
+                let shotRow = parseInt(prompt(`Введіть рядок для пострілу від 1 до ${rowNumbers} `))
+            
+                if((shotColumn === shipColumn)&&(shotRow === shipRow)){
+                    alert(`Корабель знищено!`)
+                    break
+                }else
+                alert(`Не влучив!`)
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Задача 5</h1>
+
+    <p>
+        Інвестор вклав S тис. грн на 20 років під 20% річних. Визначити за допомогою циклів
+        суму, яку він одержить (без оподаткування).
+    </p>
+
+    <script>
+        let investments = parseInt(prompt(`Введіть суму вкладу`))
+        let income = 20
+        let yearsInvestments = 2    
+        let profit = 0
+        for (let year = 0; year < yearsInvestments; year++) {
+            profit+= (20 / 100) * investments.toFixed(2)
+        }
+        let sum = (profit + investments).toFixed(2)
+
+        document.write(`Через 20 років ви отримаєте ${sum}`)
+    </script>
+</body>
+</html>

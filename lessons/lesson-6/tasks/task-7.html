@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Задача 7</h1>
+
+    <p>
+        Інвестор вклав S тис. грн на 20 років під 20% річних, а потім на 17 років під 27%
+        річних. Визначити за допомогою циклів суму, яку він одержить.
+    </p>
+
+    <script>
+    let investments = parseInt(prompt(`введіть суму депозиту`))
+    let deposit1 = 20
+    let deposit2 = 27
+    let yearsDeposit1 = 20
+    let yearsDeposit2 = 17
+    let profit = 0
+    let sum 
+
+    for (let year = 0; year < yearsDeposit1; year++) {
+        profit+= (deposit1/100)*investments
+        
+    }
+    console.log(`${profit}`)
+    for (let year = 0; year < yearsDeposit2; year++) {
+        profit+=(deposit2 / 100)*investments
+    }
+    sum = (investments + profit).toFixed(2)
+    document.write(`${investments}тис. грн на 20 років під 20% річних, а потім на 17 років під 27%
+        річних це ${sum} грн`)
+
+    </script> 
+</body>
+</html>

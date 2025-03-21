@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Задача 9 інші</h1>
+
+    <p>
+        Комерсант, володіючи стартовим капіталом 100 грн, 
+        зайнявся торгівлею, що збільшує його капітал щомісячно на 10%. 
+        Через скільки років він накопичить суму 1000, достатню для того, 
+        щоб придбати власний магазин?
+    </p>
+
+    <script>
+        let startSum = 100
+        let profitMounth = 10
+        let targetSum = 1000
+        for (let mounth = 1; ; mounth++) {
+            startSum+= parseFloat((profitMounth / startSum * 100).toFixed(2))
+            startSum = parseFloat(startSum.toFixed(2))
+            console.log(startSum)
+            if(startSum >= targetSum){
+                let years = Math.floor(mounth/12)
+                document.write(`щоб отримати ${targetSum} вам знажобиться${years}років`)
+                break
+            }
+
+        }
+    </script>
+</body>
+</html>

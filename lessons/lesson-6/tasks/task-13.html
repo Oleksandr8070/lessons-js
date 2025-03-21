@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Задача 1 (інші)</h1>
+
+    <p>
+        З клавіатури вводяться числа до тих пір, поки послідовність є зростаючою або спадною.
+    </p>
+
+    <script>
+    let oldNum = parseInt(prompt('введіть число'))
+    let next = 1
+    for (let i = 0; i < next; i++) {
+        let newNum = parseInt(prompt(`введіть число`))
+        if(Math.abs(newNum - oldNum) == 1){
+            oldNum = newNum
+            next++
+        }else{
+            document.write(`розрахунок закінчено`)
+            break
+        }
+    }
+    </script>
+</body>
+</html>

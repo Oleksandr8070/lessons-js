@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Задача 8 інші</h1>
+
+    <p>
+        Щоденно спортзал відвідує певна кількість людей. 
+        Користувач вводить такі дані: скільки людей відвідало 
+        спортзал за день та вік кожного відвідувача. Потрібно 
+        вивести вік найстаршого та наймолодшого відвідувачів, 
+        а також середній вік всіх відвідувачів спортзалу за день.
+
+    </p>
+
+    <script>
+        let customerNumber = parseInt(prompt(`введіть кількість клієнтів`))
+        let maxYears = -Infinity
+        let minYears = Infinity
+        let sum = 0
+        let avergeYears
+
+        for (let customer = 1; customer <= customerNumber; customer++) {
+            let yearsOld = parseInt(prompt(`введіть вік клієнта № ${customer}`))
+            if(yearsOld > maxYears){
+                maxYears = yearsOld
+            }
+            if(yearsOld < minYears){
+                minYears = yearsOld
+            }
+            sum+=yearsOld
+        }
+        avergeYears = Math.floor(sum/customerNumber)
+        document.write(`вік найстаршого ${maxYears} років наймолодшого відвідувачів ${minYears} років <br> 
+        середній вік всіх відвідувачів спортзалу за день ${avergeYears} років`)
+    </script>
+</body>
+</html>

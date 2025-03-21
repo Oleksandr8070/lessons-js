@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Задача 4</h1>
+
+    <p>
+        Побудувати ялинку
+    </p>
+
+    <script>
+        for (let section = 0; section < 3; section++) {
+            let letterNum = 1
+            for (let row = 0; row < 5; row++) {
+                document.write(`<br>`)
+                for (let column = 0; column < letterNum; column++) {
+                    let letter = String.fromCharCode(111)
+                    document.write(`${letter}`)
+                }
+                letterNum++
+            }
+        }
+    </script>
+</body>
+</html>
